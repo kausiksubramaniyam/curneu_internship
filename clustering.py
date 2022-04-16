@@ -1,9 +1,7 @@
 import matplotlib.pyplot as plt
 from matplotlib import style
 import numpy as np
-from sklearn import preprocessing
-from sklearn.model_selection import train_test_split
-import pandas as pd
+
 
 
 class K_Means:
@@ -52,7 +50,9 @@ class K_Means:
         classification = distances.index(min(distances))
         return classification
 
-
+from sklearn import preprocessing
+from sklearn.model_selection import train_test_split
+import pandas as pd
 
 df = pd.read_csv('output12.csv')
 df['Patient_DOB']=str(df['Patient_DOB'][2][6:])
