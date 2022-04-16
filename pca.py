@@ -61,9 +61,9 @@ if __name__ == "__main__":
     df.drop(['Patient_DOB'], 1, inplace=True)
 
 
-    X = np.array(df.drop(['Patient_Gender'], 1).astype(float))
+    X = np.array(df.drop(['description'], 1).astype(float))
     X = preprocessing.scale(X)
-    y = np.array(df['Patient_Gender'])
+    y = np.array(df['description'])
 
     pca = PCA(2)
     pca.fit(X)
