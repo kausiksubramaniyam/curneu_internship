@@ -48,7 +48,6 @@ def handle_non_numerical_data(df):
 
 if __name__ == "__main__":
     import matplotlib.pyplot as plt
-    from sklearn import datasets
 
 
     df = pd.read_csv('output12.csv')
