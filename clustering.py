@@ -84,9 +84,9 @@ def handle_non_numerical_data(df):
 df = handle_non_numerical_data(df)
 print(df.head())
 
-X = np.array(df.drop(['Patient_Gender'], 1).astype(float))
+X = np.array(df.drop(['description'], 1).astype(float))
 X = preprocessing.scale(X)
-y = np.array(df['Patient_Gender'])
+y = np.array(df['description'])
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5)
 
